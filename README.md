@@ -145,7 +145,7 @@ cp .env.example .env.local
 Or manually create a `.env.local` file in the `frontend/` directory:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
 **Note:** The `.env.example` files are provided as templates. Make sure to create your actual `.env` and `.env.local` files (these are gitignored and won't be committed).
@@ -243,14 +243,14 @@ Clear all chat messages.
 
 ## Features
 
-- ✅ Chat interface with user and AI message bubbles
-- ✅ Message persistence in MongoDB
-- ✅ Loading indicator while AI is responding
-- ✅ Error handling and display
-- ✅ Input validation (max 500 characters)
-- ✅ Auto-scroll to newest message
-- ✅ Clear chat button
-- ✅ Schema designed for future multi-session support
+-  Chat interface with user and AI message bubbles
+-  Message persistence in MongoDB
+-  Loading indicator while AI is responding
+-  Error handling and display
+-  Input validation (max 500 characters)
+-  Auto-scroll to newest message
+-  Clear chat button
+-  Schema designed for future multi-session support
 
 ## Troubleshooting
 
