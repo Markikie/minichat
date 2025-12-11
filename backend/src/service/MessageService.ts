@@ -91,13 +91,13 @@ export class MessageService {
       };
     } catch (error) {
       // Re-throw validation and Ollama errors
-      if (error instanceof ValidationError || 
-          error instanceof DatabaseError ||
-          error.message?.includes('Ollama')) {
+      if (
+        error instanceof ValidationError ||
+        error instanceof DatabaseError ||
+        (error instanceof Error && error.message?.includes('Ollama'))
+      ) {
         throw error;
       }
-      
-      // Wrap unexpected errors
       throw new DatabaseError(
         `Failed to process message: ${error instanceof Error ? error.message : String(error)}`
       );
